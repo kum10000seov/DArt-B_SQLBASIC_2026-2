@@ -52,15 +52,8 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 
 아래 키워드 중 중요하다고 생각한 개념을 2개 이상 골라 짧게 정리해주세요. 3개보다 더 많이 정리하고 싶다면 자유롭게 항목을 추가해도 좋습니다.
 
-이번 주 키워드:
-- COUNT
-- SUM
-- AVG
-- MAX
-- MIN
-- GROUP BY
-- HAVING
-- 집계 기준
+<img width="476" height="236" alt="image" src="https://github.com/user-attachments/assets/f93f9bc1-2d25-40c2-82db-d5ff0895cf1e" />
+
 
 ## 01.
 
