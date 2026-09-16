@@ -65,9 +65,14 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 ## 01.
 
 ```
-개념 이름:
-개념 설명:
-예시 쿼리:
+개념 이름: WHERE
+개념 설명: Table에 바로 조건을 설정하고 싶을 경우 사용
+예시 쿼리: SELECT
+            컬럼1, 컬럼2,
+            COUNT(컬럼1) AS col_count
+          FROM <table>
+          WHERE
+            컬럼1 >= 3
 ```
 
 ## 02.
