@@ -128,7 +128,7 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 
 ```
 - 문제 요구사항: 가장 최근에 들어온 동물이 들어온 "시점"
-- 사용한 SQL 절:
+- 사용한 SQL 절
 SELECT DATETIME AS 시간
 FROM ANIMAL_INS
 ORDER BY DATETIME DESC
