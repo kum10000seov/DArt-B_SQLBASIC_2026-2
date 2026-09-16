@@ -127,12 +127,16 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 풀이 과정:
 
 ```
-- 문제 요구사항:
+- 문제 요구사항: 가장 최근에 들어온 동물이 들어온 "시점"
 - 사용한 SQL 절:
-- 새로 배운 점:
+SELECT DATETIME AS 시간
+FROM ANIMAL_INS
+ORDER BY DATETIME DESC
+LIMIT 1;
+- 새로 배운 점: 가장 최근의 시간이라는 것을 SQL로 표현하자면 내림차순으로서 가장 먼저 나오는 시간 1개이다.
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+<img width="1265" height="694" alt="image" src="https://github.com/user-attachments/assets/4a47bdfa-bdfd-4076-8791-35fc6b6fe5ff" />
 
 ## 🧩 문제 2
 
