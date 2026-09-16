@@ -69,7 +69,7 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 개념 설명: Table에 바로 조건을 설정하고 싶을 경우 사용
 예시 쿼리: SELECT
             컬럼1, 컬럼2,
-            COUNT(컬럼1) AS col_count
+            COUNT(컬럼1) AS col1_count
           FROM <table>
           WHERE
             컬럼1 >= 3
@@ -78,17 +78,30 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 ## 02.
 
 ```
-개념 이름:
-개념 설명:
-예시 쿼리:
+개념 이름: HAVING
+개념 설명: GROUP BY한 후 조건을 설정하고 싶은 경우 사용
+예시 쿼리: SELECT
+            컬럼1, 컬럼2,
+            COUNT(컬럼1) AS col1_count
+           FROM <table>
+           GROUP BY 컬럼1, 컬럼2
+           HAVING
+             col1_count >3    
 ```
 
 ## (선택) 03.
 
 ```
-개념 이름:
-개념 설명:
-헷갈린 점:
+개념 이름: GROUP BY, ORDER BY
+개념 설명: GROUP BY는 같은 값끼리 모아서 그룹화하기 위한 함수이고, ORDER BY는 정렬을 위한 함수로서 기본값으로는 오름차순(작은것부터)이나 내림차순(큰것부터) 정렬이 필요할 경우 DESC를 입력토록 한다.
+예시 쿼리: SELECT
+            type1,
+            COUNT(id) AS cnt
+           FROM basic.pokemon
+           GROUP BY
+            type 1
+           HAVING cnt >= 10
+           ORDER BY cnt DESC    
 ```
 
 ---
