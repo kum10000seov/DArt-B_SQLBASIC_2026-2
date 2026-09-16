@@ -145,12 +145,13 @@ LIMIT 1;
 풀이 과정:
 
 ```
-- 사용한 집계 함수:
-- 집계 대상 컬럼:
-- 결과를 검증한 방법:
+- 사용한 집계 함수: MAX
+- 집계 대상 컬럼: PRICE
+- 결과를 검증한 방법: ORDER BY PRICE DESC LIMIT 1로 정렬 후 최상단 1개 행의 판매가를 직접 조회하여 MAX(PRICE) 결과값과 일치하는지 확인
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+<img width="1265" height="695" alt="image" src="https://github.com/user-attachments/assets/f711bf9e-a7fb-495a-ac00-e01a16f57762" />
+
 
 ## 🧩 문제 3
 
