@@ -707,9 +707,9 @@ JOIN == 기준 Table + 공통 Key + 필요한 다른 Table의 정보
 
 ```
 - GROUP BY 기준: CAR_ID
-- 평균을 계산한 방식: AVG(DATEDIFF(END_DATE, START_DATE) + 1) 후 ROUND(..., 1) 적용
+- 평균을 계산한 방식: AVG(DATEDIFF(END_DATE, START_DATE) + 1) 후 ROUND() 적용
 - HAVING에 사용한 조건: 평균 대여 기간이 7일 이상
-- 처음 헷갈렸던 점: 대여 기간 계산 시 시작일과 종료일을 모두 포함하므로 DATEDIFF(...) + 1 처리 필요
+- 처음 헷갈렸던 점: 대여 기간 계산 시 시작일과 종료일을 모두 포함하므로 DATEDIFF() + 1 처리 필요
 ```
 <img width="565" height="450" alt="image" src="https://github.com/user-attachments/assets/a91864d4-79e8-4ec0-b84e-1518ee099cf1" />
 
