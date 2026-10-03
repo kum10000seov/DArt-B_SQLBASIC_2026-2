@@ -54,7 +54,7 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 
 # 2️⃣ 수행 인증란
 
-<img width="283" height="230" alt="image" src="https://github.com/user-attachments/assets/061d482d-d97d-45d2-b2a1-fef1356450f9" />
+
 
 
 ---
