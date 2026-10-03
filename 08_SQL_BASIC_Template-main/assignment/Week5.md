@@ -49,8 +49,6 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 
 # 1️⃣ 개념 정리
 
-# 1️⃣ 개념 정리
-
 ## 📑 목차
 
 1. [날짜 및 시간 데이터 타입](#date-time-type)
@@ -706,6 +704,7 @@ CASE WHEN
 
 # 2️⃣ 수행 인증란
 
+<img width="278" height="313" alt="image" src="https://github.com/user-attachments/assets/d16623c3-6548-4e59-ab0e-e296b7411422" />
 
 
 
