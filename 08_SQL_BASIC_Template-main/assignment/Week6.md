@@ -649,11 +649,7 @@ JOIN == 기준 Table + 공통 Key + 필요한 다른 Table의 정보
 
 # 2️⃣ 수행 인증란
 
-아래 중 하나 이상을 첨부해주세요.
-
-- 강의 수강 화면 캡처
-- JOIN 문제 풀이 정답 화면 캡처
-- JOIN 전후 결과 row 수를 비교한 캡처 또는 메모
+<img width="283" height="230" alt="image" src="https://github.com/user-attachments/assets/061d482d-d97d-45d2-b2a1-fef1356450f9" />
 
 ---
 
