@@ -611,6 +611,20 @@ IF(
 
 ## 13. 컬럼 변환 전체 정리
 
+<img width="610" height="284" alt="image" src="https://github.com/user-attachments/assets/31fe7445-e817-4cc5-8004-e752e6c73d17" />
+
+### 기본 SQL 흐름
+
+```sql
+SELECT
+    컬럼1,
+    컬럼2,
+    변환된_컬럼
+FROM 테이블
+WHERE 조건
+GROUP BY 집계할_컬럼;
+```
+
 ### 데이터 타입
 
 | 종류 | 내용 |
@@ -630,17 +644,6 @@ IF(
 | 데이터 타입 변경 | 필요한 타입으로 변환 |
 | 조건에 따른 변경 | `CASE WHEN`, `IF` |
 
-### 기본 SQL 흐름
-
-```sql
-SELECT
-    컬럼1,
-    컬럼2,
-    변환된_컬럼
-FROM 테이블
-WHERE 조건
-GROUP BY 집계할_컬럼;
-```
 
 ### 전체 흐름
 
