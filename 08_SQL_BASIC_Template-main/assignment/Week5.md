@@ -361,9 +361,7 @@ DATETIME
 
 `%Y`, `%m`, `%d`, `%H` 등으로 날짜·시간 형식 지정
 
-> [!NOTE]
-> Format Elements 전부 암기 X  
-> → 필요할 때 공식 문서 확인 후 적용
+> Format Elements 전부 암기 X → 필요할 때 공식 문서 확인 후 적용
 
 ---
 
