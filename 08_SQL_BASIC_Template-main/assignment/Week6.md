@@ -754,12 +754,14 @@ LEFT JOIN table_b AS B
 풀이 과정:
 
 ```
-- 사용한 테이블:
-- JOIN key:
-- 날짜를 출력한 형식:
+- 사용한 테이블: `BOOK`(별칭 `B`), `AUTHOR`(별칭 `A`)
+- JOIN key: `B.AUTHOR_ID = A.AUTHOR_ID`
+- 날짜를 출력한 형식: `DATE_FORMAT(B.PUBLISHED_DATE, '%Y-%m-%d')`를 사용하여 `YYYY-MM-DD` 형식의 문자열로 출력함.
+- 정렬 기준: `ORDER BY B.PUBLISHED_DATE ASC`로 출판일 기준 오름차순 정렬함. `ASC`는 생략 가능하지만, `ORDER BY` 자체를 생략하면 결과 순서는 보장되지 않음.
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+<img width="319" height="487" alt="image" src="https://github.com/user-attachments/assets/11edd5c5-5755-4c29-8c11-80f60fd54ea3" />
+
 
 ## 🧩 문제 2
 
@@ -768,12 +770,13 @@ LEFT JOIN table_b AS B
 풀이 과정:
 
 ```
-- 연결한 테이블:
-- JOIN key:
-- 집계한 값:
+- 연결한 테이블: `PRODUCT`(별칭 `P`), `OFFLINE_SALE`(별칭 `S`)
+- JOIN key: `P.PRODUCT_ID = S.PRODUCT_ID`
+- 집계한 값: 상품코드별 총매출액. `SUM(P.PRICE * S.SALES_AMOUNT)`로 판매가 × 판매량을 합산하고, `SALES`라는 별칭으로 출력
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+<img width="385" height="491" alt="image" src="https://github.com/user-attachments/assets/d25512c3-bc7a-41e1-9d92-c31ed84a39f1" />
+
 
 ## 🧩 문제 3
 
@@ -782,12 +785,13 @@ LEFT JOIN table_b AS B
 풀이 과정:
 
 ```
-- 기준이 되는 왼쪽 테이블:
-- LEFT JOIN이 필요한 이유:
-- NULL이 발생하는 경우:
+- 기준이 되는 왼쪽 테이블: `ANIMAL_OUTS`(별칭 `O`). 입양 기록이 있는 동물을 기준으로 조회
+- LEFT JOIN이 필요한 이유: 보호 시작 기록이 없는 동물도 입양 기록은 유지해야 하는데, INNER JOIN을 사용하면 찾으려는 미연결 동물이 제외됨.
+- NULL이 발생하는 경우: `O.ANIMAL_ID`와 일치하는 행이 `ANIMAL_INS`에 없으면 오른쪽 테이블 `I`의 컬럼이 NULL로 채워짐. `WHERE I.ANIMAL_ID IS NULL`로 해당 동물만 선택함.
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+<img width="295" height="490" alt="image" src="https://github.com/user-attachments/assets/fd58210b-f138-45db-870e-3cfb5c15c4e7" />
+
 
 ## 🧩 문제 4
 
@@ -796,13 +800,14 @@ LEFT JOIN table_b AS B
 풀이 과정:
 
 ```
-- 사용한 테이블:
-- JOIN key:
-- 비교한 날짜 컬럼:
-- 정렬 기준:
+- 사용한 테이블: `ANIMAL_INS`(별칭 `I`), `ANIMAL_OUTS`(별칭 `O`)
+- JOIN key: `I.ANIMAL_ID = O.ANIMAL_ID`
+- 비교한 날짜 컬럼: 입양일 `O.DATETIME`과 보호 시작일 `I.DATETIME`. `O.DATETIME < I.DATETIME`으로 입양일이 보호 시작일보다 빠른 동물만 선택함.
+- 정렬 기준: `ORDER BY I.DATETIME ASC`로 보호 시작일이 빠른 순서대로 정렬함.
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+<img width="308" height="494" alt="image" src="https://github.com/user-attachments/assets/83b9697d-013f-4001-96ae-b02853a9c01c" />
+
 
 ---
 
@@ -818,9 +823,9 @@ JOIN 개념이 헷갈린다면 아래 자료를 함께 참고해도 좋습니다
 # 5️⃣ 이번 주 회고
 
 ```
-1. INNER JOIN과 LEFT JOIN의 차이를 어떻게 이해했는지:
-2. JOIN 문제를 풀 때 가장 먼저 확인해야 할 것:
-3. JOIN 결과가 예상과 달랐던 경험이 있다면:
+1. INNER JOIN과 LEFT JOIN의 차이를 어떻게 이해했는지: INNER JOIN은 일치하는 행만 남기고, LEFT JOIN은 미연결 행도 왼쪽 기준으로 유지하는 방식으로 이해함.
+2. JOIN 문제를 풀 때 가장 먼저 확인해야 할 것: 조회 목적과 유지할 대상을 먼저 정하고, 테이블을 연결할 공통 Key를 확인해야 함.
+3. JOIN 결과가 예상과 달랐던 경험이 있다면: 날짜 함수 혼동으로 오류를 겪었으며, 실행 환경 확인과 명시적인 정렬이 필요함을 배움.
 ```
 
 수고하셨습니다!
